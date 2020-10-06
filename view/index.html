@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main class="wrapper">
+        <section class="form-wrapper">
+        <section class="form">
+            <label for="username">Användarnamn</label>
+            <input type="text" id="username" class="input-field">
+            <label for="pass">Lösenord</label>
+            <input type="password" id="pass" class="input-field">
+        </section>
+        <article>
+            <p id="errorMessage" class="hide">Användarnamn eller lösenord är inte korrekt.</p>
+        </article>
+        <button id="submit" class="button">Logga in</button>
+        <article class="create-account">
+            <p class="create-account__text">Har du inget konto?</p><a href="createAccount.html" class="link">Skapa ett konto</a>
+        </article>
+        </section>
+    </main>
+
+    <script src="js/client.js"></script>
+</body>
+</html>

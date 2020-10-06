@@ -1,0 +1,38 @@
+{
+  "users": [
+    {
+      "uuid": "5bc98651-e8b6-42c1-a8d0-3dbb83b294dc",
+      "id": 1,
+      "username": "chris",
+      "password": "$2b$10$Xa1KbEKzruVEBptYDxcwSO7sUJVXmNJ2JuVOvFmHnnkqBdgNxDQQa",
+      "role": "admin"
+    },
+    {
+      "uuid": "01d0bae5-91b8-4b08-bc07-1a317ef320d2",
+      "username": "ada",
+      "id": 2,
+      "password": "$2b$10$WiRJWuVgPg4EJOZtt1JZMurmdmABHbmeQTsP4.Ic5NWZQqD/BB9wu",
+      "role": "user"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "text": "Grym sida!",
+      "author": "chris"
+    },
+    {
+      "id": 2,
+      "text": "Väldigt beroendeframkallande!",
+      "author": "ada"
+    },
+    {
+      "text": "Tackar för upplevelsen!",
+      "author": "chris"
+    },
+    {
+      "text": "Låtsas vara Ada",
+      "author": "ada"
+    }
+  ]
+}
