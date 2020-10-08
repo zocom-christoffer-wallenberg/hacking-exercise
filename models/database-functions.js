@@ -30,6 +30,7 @@ module.exports = {
     },
 
     async addComment(comment, user) {
+        console.log('COMMENT: ', comment);
         return await database.get('comments').push({ text: comment.text, author: user }).write();
     }
 }
